@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certeza?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .option {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff4d4d; /* Cor vermelha */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+		.option-green {
+			display: inline-block;
+            padding: 10px 20px;
+			background-color: #4CAF50;
+			color: white;
+            text-decoration: none;
+            border-radius: 5px;
+			cursor: pointer;
+		}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Você é gay?</h1>
+
+    <ul>
+        <li>
+            <a class="option" href="https://redlaifer.github.io/n-o/" onmouseover="teleportButton(this)">Não</a>
+        </li>
+		<li>
+            <a class="option-green" href="https://redlaifer.github.io/sim2/">Sim</a>
+        </li>
+    </ul>
+</div>
+
+<script>
+    function teleportButton(button) {
+        const randomX = Math.random() * (window.innerWidth - button.clientWidth);
+        const randomY = Math.random() * (window.innerHeight - button.clientHeight);
+
+        button.style.position = "absolute";
+        button.style.left = randomX + "px";
+        button.style.top = randomY + "px";
+    }
+</script>
+
+</body>
+</html>
